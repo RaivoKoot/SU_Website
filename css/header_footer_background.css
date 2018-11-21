@@ -6,6 +6,10 @@ body {
     background-size: cover;
 }
 
+header{
+  top: 0;
+}
+
 header, footer {
   display: flex;
   flex-direction: row;
@@ -17,43 +21,21 @@ header, footer {
   height: 5em;
   background-color: white;
 }
-
-#logo {
-  height: 100%
-}
-
-main {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-top: 15em;
-}
-
-main p {
-  font-size: 5em;
-  color: white;
-  text-shadow: 2px 2px 3px black;
-
-  margin-block-start: 0;
-  margin-block-end: 0;
-}
-
-#lowerTitle {
-    /*border-bottom: 1px solid gray;*/
-}
-
-header{
-  top: 0;
-}
 footer {
   height: 5%;
   bottom: 0px;
   margin-bottom: 0px;
 }
+
+#logo {
+  height: 100%
+}
+
 nav{
   display: none;
 }
+
+/* breakpoint for desktop */
 @media screen and (min-width: 910px) {
 nav {
   display: inline;
@@ -71,6 +53,7 @@ nav ul li {
 
 }
 
+/* breakpoint for narrow desktop */
 @media screen and (min-width: 500px) {
 
 body {
