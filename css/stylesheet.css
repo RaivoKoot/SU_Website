@@ -6,23 +6,15 @@ body {
     background-size: cover;
 }
 
-@media screen and (min-width: 500px) {
-
-body {
-    background-image: url("resources/backgroundDesktop.jpg");
-}
-
-}
 header, footer {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  z-index: 1;
 
   position: fixed;
   width: 100%;
-  height: 13%;
+  height: 5em;
   background-color: white;
 }
 
@@ -35,16 +27,20 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 13%;
+  margin-top: 15em;
 }
 
 main p {
-  font-size: 3em;
+  font-size: 5em;
   color: white;
-  text-shadow: 1px 1px 2px black;
+  text-shadow: 2px 2px 3px black;
 
   margin-block-start: 0;
   margin-block-end: 0;
+}
+
+#lowerTitle {
+    /*border-bottom: 1px solid gray;*/
 }
 
 header{
@@ -54,4 +50,52 @@ footer {
   height: 5%;
   bottom: 0px;
   margin-bottom: 0px;
+}
+nav{
+  display: none;
+}
+@media screen and (min-width: 910px) {
+nav {
+  display: inline;
+}
+
+nav ul {
+  min-width: 860px;
+  padding-left: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-left: 0.5em;
+}
+
+}
+
+@media screen and (min-width: 500px) {
+
+body {
+    background-image: url("resources/backgroundDesktop.jpg");
+}
+
+nav ul li {
+  display: inline;
+  margin-left: 0.5em;
+}
+
+
+
+a {
+  color: gray;
+  text-decoration: none; /* no underline */
+  border-bottom: 0.5px solid gray;
+  border-top: 0.5px solid gray;
+  padding: 0.5em 1em 0.5em 1em;
+  font-weight: 500;
+  font-family: 'Montserrat', sans-serif;
+}
+
+a:hover {
+  color: #29b6f6;
+}
+
 }
