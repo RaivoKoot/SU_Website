@@ -6,84 +6,135 @@ body {
     background-size: cover;
 }
 
-header{
-  top: 0;
-}
-
-header, footer {
-  /* make contents center aligned */
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-
+header {
   /* set dimensions */
   position: fixed;
   width: 100%;
   height: 5em;
   background-color: white;
-}
-
-/* set dimension and location */
-footer {
-  height: 5%;
-  bottom: 0px;
-  margin-bottom: 0px;
+  text-align: center;
+  top: 0;
 }
 
 #bannerLogo {
-  height: 100% /* maximize logo size to banner height */
-}
-
-/* hide nav on small displays */
-nav{
-  display: none;
+  height: 100%; /* maximize logo size to banner height */
+  display: inline-block;
+  vertical-align: middle;
+  top: 0;
 }
 
 /* customize nav menu boxes */
-header a {
+nav a {
   color: gray;
   text-decoration: none; /* no underline */
-
-  border-bottom: 0.5px solid gray; /* lines above and below nav boxes */
-  border-top: 0.5px solid gray;
-
-  padding: 0.5em 1em 0.5em 1em; /* spacing between lines and nav boxes */
   font-family: 'Montserrat', sans-serif;
+
+  display: block;
+
+  border-top: 0.5px solid gray; /* lines above and below nav boxes */
+  padding: 1em 0em 1em 0;
+  background-color: white;
 }
 
 header a:hover {
   color: #29b6f6;
 }
 
-/* stops nav bar from breaking into a new row when screen gets narrow */
-nav ul {
-  min-width: 860px;
-  padding-left: 0;
+/**************** Burger menu hiding ****************************/
+
+#burgerIcon {
+  font-size: 3em;
+  cursor: pointer;
+  vertical-align: middle;
+  display: inline-block;
+
+  padding-left: 20%;
+  color: #0999dc;
+
+  /* stop hamburger icon from being highlighted when double clicking */
+  -webkit-user-select: none; /* Chrome/Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+ */
 }
 
-/* make nav bar horizontal and specify spacing between nav boxes */
-nav ul li {
-  display: inline;
-  margin-left: 0.5em;
+/* hide checkbox of burger icon */
+#toggle {
+  display: none;
 }
 
-/********************* breakpoint for desktop ***********************/
-@media screen and (min-width: 910px) {
-
-/* make nav bar appear */
 nav {
+  display: none;
+}
+
+#toggle:checked + nav{
   display: inline;
 }
 
-}
-
-/***************** breakpoint for narrow desktop ******************/
-@media screen and (min-width: 500px) {
+/********************************************************************/
+/***************** breakpoint for narrow desktop ********************/
+/********************************************************************/
+@media screen and (min-width: 866px) {
 
 /* get widescreen background image */
 body {
     background-image: url("resources/backgroundDesktop.jpg");
 }
+
+#bannerLogo {
+  height: 65%
+}
+
+header {
+  height: 10em;
+}
+
+#toggle:checked + nav{
+  display: inline-block;
+}
+
+nav {
+  min-width: 867px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+nav a{
+  display: inline-block;
+  margin-left: 0.5em;
+  margin-bottom: 0em;
+  border-bottom: 0.5px solid gray; /* lines above and below nav boxes */
+  border-top: 0.5px solid gray;
+
+  padding: 0.5em 1em 0.5em 1em; /* spacing between lines and nav boxes */
+}
+
+#lastNavElement {
+  margin-right: 0.5em;
+}
+
+#burgerIcon {
+  display: none;
+}
+
+}
+
+/********************************************************************/
+/********************* breakpoint for desktop ***********************/
+/********************************************************************/
+@media screen and (min-width: 1040px) {
+
+/*
+nav {
+  min-width: 860px;
+}
+*/
+header {
+  height: 5em;
+}
+
+#bannerLogo {
+  height: 100%
+}
+
 
 }
