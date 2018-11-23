@@ -1,5 +1,5 @@
 body {
-    background-image: url("resources/backgroundMobile.jpg");
+    background-image: url("resources/gradient5.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
@@ -14,6 +14,11 @@ header {
   background-color: white;
   text-align: center;
   top: 0;
+  box-shadow: 2px 3px 3px rgba(50, 50, 50, 0.5);
+
+  opacity: 0.99; /* trick so that the images in main with a low opacity
+  dont overrun theh eader */
+  z-index: 1;
 }
 
 #bannerLogo {
@@ -24,7 +29,7 @@ header {
 }
 
 /* customize nav menu boxes */
-nav a {
+header nav a {
   color: gray;
   text-decoration: none; /* no underline */
   font-family: 'Montserrat', sans-serif;
@@ -62,7 +67,7 @@ header a:hover {
   display: none;
 }
 
-nav {
+header nav {
   display: none;
 }
 
@@ -73,11 +78,11 @@ nav {
 /********************************************************************/
 /***************** breakpoint for narrow desktop ********************/
 /********************************************************************/
-@media screen and (min-width: 866px) {
+@media screen and (min-width: 879px) {
 
 /* get widescreen background image */
 body {
-    background-image: url("resources/backgroundDesktop.jpg");
+    /*background-image: url("resources/gradient4.jpg");*/
 }
 
 #bannerLogo {
@@ -92,13 +97,13 @@ header {
   display: inline-block;
 }
 
-nav {
-  min-width: 867px;
+header nav {
+  min-width: 879px;
   display: inline-block;
   vertical-align: middle;
 }
 
-nav a{
+header nav a{
   display: inline-block;
   margin-left: 0.5em;
   margin-bottom: 0em;
@@ -121,13 +126,8 @@ nav a{
 /********************************************************************/
 /********************* breakpoint for desktop ***********************/
 /********************************************************************/
-@media screen and (min-width: 1040px) {
+@media screen and (min-width: 1070px) {
 
-/*
-nav {
-  min-width: 860px;
-}
-*/
 header {
   height: 5em;
 }
