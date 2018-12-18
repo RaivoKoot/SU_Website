@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <title>Students Union</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/areas.css">
+    <link rel="stylesheet" href="css/food.css">
+    <link rel="stylesheet" href="css/header_footer_background.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,400,200,300" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- Start of Top Banner -->
+    <header>
+        <img id="bannerLogo" src="css/resources/logo2bg.png" alt="logo">
+
+        <!-- Menu System -->
+        <label id="burgerIcon" for="toggle">&#9776;</label>
+        <input type="checkbox" id="toggle" />
+        <nav>
+            <a href="index.html">HOME</a>
+            <a href="areas.html">AREAS</a>
+            <a href="food.html">FOOD</a>
+            <a href="week.html">TYPICAL WEEK</a>
+            <a href="aboutUs.html">ABOUT US</a>
+            <a href="contact.html">CONTACT</a>
+            <a id="lastNavElement" href="Accessibility.html">ACCESSIBILITY</a>
+        </nav>
+
+    </header>
+    <!-- End of Top Banner -->
+
+    <!-- Start of MAIN BODY -->
+    <main>
+
+        <h1>CONTACT US</h1>
+
+        <p id="mainP">If you have any questions feel free to message us using the form below. We will get back to you as soon as possible!</p>
+
+
+        <section id="mainSection">
+            <!-- main container | flexbox -->
+            <section>
+                <!-- container for list of area panes SERVICES | flexbox-->
+                <form name="myform" action="http://www.dcs.shef.ac.uk/cgi-intranet/public/FormMail.pl" method="get">
+
+                    <!-- the following line must be included as it is required by the cgi script -->
+                    <!-- ******************
+                    Replace your_email_address below with the relevant part of your sheffield email address.
+                    It must be your sheffield email address.
+                    ******************-->
+                    <input type="hidden" name="recipient" value="rekoot1@sheffield.ac.uk">
+
+                    <!-- full details at: http://www.scriptarchive.com/formmail.html -->
+                    <input type="hidden" name="subject" value="Yallah Habibi" />
+
+                    <p>
+                        <label for="from">Your name:</label>
+                        <input type="text" name="from" id="from" maxlength="40" size="20" placeholder="type your name..." required>
+                    </p>
+
+                    <p>
+                        <label for="email">Your e-mail:</label>
+                        <input type="email" name="email" id="email" placeholder="type your email..." maxlength="40" size="20" required>
+                    </p>
+
+                    <p>
+                        <label for="message">Email Message</label><br>
+                        <textarea name="message" id="message" rows="6" cols="50">Type your message here... </textarea>
+                    </p>
+
+                    <!-- must have one button of type 'submit' in order to send the form to the cgi script -->
+                    <p>
+                        <input type="submit" name="submit" id="submit" value="Submit">
+                        <input type="reset">
+                    </p>
+
+                </form>
+            </section>
+        </section>
+    </main>
+    <!-- End of MAIN BODY -->
+    <footer>
+      <p>&copy all rights to images, logos and contents reserved, William Shaw, Raivo Koot, 2018</p>
+    </footer>
+</body>
+
+</html>

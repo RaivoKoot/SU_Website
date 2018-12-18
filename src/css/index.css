@@ -1,0 +1,70 @@
+.imgContainer {
+  position: relative;
+}
+
+.tileLink {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+a {
+  text-decoration: none;
+}
+
+#mainP {
+  width: 85%;
+  margin-top: 5em;
+  margin-bottom: 5em;
+  font-weight: 600;
+}
+
+#arrowDown {
+  opacity: 0;
+  width: 0%;
+}
+
+/* breakpoint for narrow desktop */
+@media screen and (min-width: 879px) {
+
+  h1 {
+    font-size: 5em;
+    font-weight: 100;
+  }
+
+  #mainP {
+    font-size: 2em;
+    width: 85%;
+    margin-top: 3em;
+    margin-bottom: 3.5em;
+  }
+
+  #arrowDown {
+    opacity: 0.15;
+    width: 3%;
+    margin-bottom: 5em;
+  }
+
+}
+
+/* breakpoint for desktop */
+@media screen and (min-width: 1070px) {
+
+  #mainP {
+    font-size: 2em;
+    margin-top: 5em;
+    margin-bottom: 4.5em;
+  }
+
+  .tile{
+    height: 21em
+  }
+
+  .tile.major{
+    height: 28em
+  }
+}

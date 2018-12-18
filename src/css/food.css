@@ -1,0 +1,28 @@
+form {
+  text-align: center;
+}
+
+textarea {
+  width: 100%;
+}
+/* breakpoint for narrow desktop */
+@media screen and (min-width: 879px) {
+}
+
+/* breakpoint for desktop */
+@media screen and (min-width: 1070px) {
+
+  #mainP {
+    width: 45%
+  }
+
+  #mainSection {
+    width: 50%;
+  }
+
+  article {
+    height: inherit;
+    width: inherit;
+
+  }
+}

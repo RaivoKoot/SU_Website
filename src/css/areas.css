@@ -1,0 +1,129 @@
+main {
+  margin-top: 4em;
+}
+main, main section, article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+}
+
+h2 {
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+main p {
+  font-weight: 300;
+}
+
+#mainP {
+  width: 90%
+}
+
+h2, h1, p{
+  color: white;
+  text-shadow: 1px 1px 2px black;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 150 ;
+
+  text-decoration: none;
+  text-align: center;
+}
+
+h2, h1, {
+  font-size: 3em;
+  margin: 0.5em;
+}
+
+#mainSection {
+  width: 80%;
+}
+
+#mainSection section {
+  width: 100%;
+}
+
+#mainSection article {
+  margin: 1em;
+  box-shadow: 1px 1px 2px 1px rgba(50, 50, 50, 0.75);
+  padding: 0em;
+  background-color: black;
+
+  border-width: 2px;
+  border-style: solid;
+  border-color: black;
+  border-radius: 8px;
+}
+
+#mainSection img {
+  width: 100%;
+  border-width: 0.5px;
+  border-radius: 8px;
+}
+
+.tile{
+    text-align: center;
+    color: white;
+    /*background-imge: url("css/resources/areasTilePhotoBlue.jpg")*/
+    text-decoration: none;
+}
+
+.imgContainer {
+  position: relative;
+}
+#mainSection .tileLink{
+    padding: 0.2em;
+
+    font-size: 1.5em;
+    font-weight: 400;
+    margin: 0;
+}
+
+.tileText {
+    position: relative;
+    margin: 0.3em;
+    text-decoration: none;
+}
+
+#facilitiesTile{
+    background-color: black;
+}
+
+/* breakpoint for narrow desktop */
+@media screen and (min-width: 879px) {
+  main {
+    margin-top: 11.5em;
+  }
+}
+
+/* breakpoint for desktop */
+@media screen and (min-width: 1070px) {
+  main {
+    margin-top: 6.5em;
+  }
+
+  h2{
+    font-size: 4em;
+  }
+  h2 {
+    font-size: 4em;
+    margin-left: 0;
+    margin-bottom: 0.3em;;
+    margin-right: 0;
+  }
+
+  #mainSection {
+    flex-direction: row;
+    width: 90%;
+  }
+
+  #mainSection p {
+    margin: 1em;
+    padding: 0;
+  }
+
+  article {
+    height: 33em
+  }
+}
